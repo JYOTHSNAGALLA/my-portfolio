@@ -1,6 +1,5 @@
 import React from 'react';
-import profilePic from '../assets/images/profile.jpg';
-import clientLogo from '../assets/images/client-logo.png';
+
 
 const About = () => {
   return (
