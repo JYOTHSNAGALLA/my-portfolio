@@ -47,11 +47,11 @@ const About = () => {
         </div>
 
         <h3 className="text-2xl font-semibold mt-8 mb-4">Clients & Collaborations</h3>
-        <div className="flex flex-wrap gap-4 justify-center">
-          <img src={profilePic} alt="Profile" />
-          <img src={clientLogo} alt="Client Logo" className="h-12" />
+<div className="flex flex-wrap gap-4 justify-center">
+  <img src="/my-portfolio/assets/images/profile.jpg" alt="Profile" className="h-28 rounded-full" />
+  <img src="/my-portfolio/assets/images/client-logo.png" alt="Client Logo" className="h-12" />
+</div>
 
-        </div>
       </div>
     </section>
   );
