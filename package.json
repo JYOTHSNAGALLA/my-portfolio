@@ -1,8 +1,8 @@
 {
-  "name": "portfolio-site",
+  "name": "my-portfolio",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://JYOTHSNAGALLA.github.io/portfolio-site",
+  "homepage": "https://JYOTHSNAGALLA.github.io/my-portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
