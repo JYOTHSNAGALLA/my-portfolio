@@ -1,4 +1,6 @@
 import React from 'react';
+import profilePic from '../assets/images/profile.jpg';
+import clientLogo from '../assets/images/client-logo.png';
 
 const About = () => {
   return (
@@ -46,7 +48,9 @@ const About = () => {
 
         <h3 className="text-2xl font-semibold mt-8 mb-4">Clients & Collaborations</h3>
         <div className="flex flex-wrap gap-4 justify-center">
-          <img src="/assets/images/client-logo.png" alt="Client Logo" className="h-12" />
+          <img src="/profile.jpg" alt="Profile" />
+          <img src={clientLogo} alt="Client Logo" className="h-12" />
+
         </div>
       </div>
     </section>
