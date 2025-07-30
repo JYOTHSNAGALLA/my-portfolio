@@ -1,5 +1,3 @@
-// App.jsx
-import React from 'react';
 import Sidebar from './components/Sidebar';
 import About from './components/About';
 import Resume from './components/Resume';
@@ -10,7 +8,7 @@ function App() {
   return (
     <div className="flex">
       <Sidebar />
-      <main className="ml-72 w-full">
+      <main className="flex-1 ml-0 md:ml-72">
         <About />
         <Resume />
         <Projects />
