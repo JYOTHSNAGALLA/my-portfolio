@@ -1,37 +1,48 @@
-import { FaGithub, FaLinkedin, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail, MdPhone, MdCake, MdLocationOn } from "react-icons/md";
 
-const Sidebar = ({ isOpen, setIsOpen }) => {
+const Sidebar = () => {
   return (
-    <aside className={`fixed top-0 left-0 h-full bg-gray-800 shadow-md z-40 text-white transition-all duration-300 ${isOpen ? "w-64" : "w-16"} hidden md:flex flex-col justify-between`}>
-      <div className="flex flex-col items-center py-6 px-2 transition-all duration-300">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="absolute top-4 right-[-12px] w-6 h-6 bg-gray-600 rounded-full flex items-center justify-center z-50"
-        >
-          {isOpen ? <FaChevronLeft /> : <FaChevronRight />}
-        </button>
+    <aside className="hidden md:flex justify-center items-center h-screen w-72 fixed left-0 top-0 bg-gray-900 p-6 z-30 shadow-lg">
+      <div className="bg-gray-800 rounded-xl p-6 w-full text-center shadow-inner">
+        <img
+          src="/profile.jpg"
+          alt="Jyothsna Galla"
+          className="rounded-full w-28 h-28 mx-auto mb-4 border-4 border-gray-700 object-cover"
+        />
+        <h2 className="text-xl font-semibold">Jyothsna Galla</h2>
+        <p className="bg-gray-700 text-sm text-white px-2 py-1 rounded mt-1 inline-block">
+          AI/ML Student
+        </p>
 
-        {isOpen && (
-          <>
-            <img src="/profile.jpg" alt="Jyothsna" className="rounded-full w-24 h-24 mb-4 border-2 border-white object-cover" />
-            <h2 className="text-lg font-bold">Jyothsna Galla</h2>
-            <p className="text-sm text-gray-400 mb-4">AI/ML Student</p>
-            <div className="space-y-2 text-sm text-gray-300 text-left">
-              <div className="flex items-center gap-2"><MdEmail /> gallajyothsna13@gmail.com</div>
-              <div className="flex items-center gap-2"><MdPhone /> +91 93988 37173</div>
-              <div className="flex items-center gap-2"><MdCake /> March 15, 2005</div>
-              <div className="flex items-center gap-2"><MdLocationOn /> Visakhapatnam, AP</div>
-            </div>
-          </>
-        )}
-      </div>
-      {isOpen && (
-        <div className="flex gap-4 justify-center pb-6">
-          <a href="https://github.com/JYOTHSNAGALLA" target="_blank"><FaGithub /></a>
-          <a href="https://linkedin.com/in/jyothsna-galla-90a2bb291" target="_blank"><FaLinkedin /></a>
+        <div className="my-6 border-t border-gray-600 pt-4 text-left text-sm text-gray-300 space-y-4">
+          <div className="flex items-center gap-3">
+            <MdEmail className="text-lg" />
+            <span>gallajyothsna13@gmail.com</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <MdPhone className="text-lg" />
+            <span>+91 93988 37173</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <MdCake className="text-lg" />
+            <span>March 15, 2005</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <MdLocationOn className="text-lg" />
+            <span>Visakhapatnam, AP</span>
+          </div>
         </div>
-      )}
+
+        <div className="flex justify-center gap-5 mt-4">
+          <a href="https://linkedin.com/in/jyothsna-galla-90a2bb291" target="_blank" rel="noreferrer">
+            <FaLinkedin className="text-2xl text-gray-400 hover:text-white" />
+          </a>
+          <a href="https://github.com/JYOTHSNAGALLA" target="_blank" rel="noreferrer">
+            <FaGithub className="text-2xl text-gray-400 hover:text-white" />
+          </a>
+        </div>
+      </div>
     </aside>
   );
 };
