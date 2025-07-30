@@ -1,10 +1,6 @@
 import React from 'react';
 import Sidebar from './components/Sidebar';
 import MobileNav from './components/MobileNav';
-import About from './components/About';
-import Resume from './components/Resume';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
 
 const App = () => {
   return (
