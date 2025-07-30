@@ -19,7 +19,7 @@ const MobileNav = () => {
           )}
         </button>
 
-        <h2 className="text-lg font-bold">Jyothsna</h2>
+        <h2 className="text-lg font-bold">Portfolio</h2>
 
         {/* Right: Nav Menu Toggle */}
         <button onClick={() => setNavOpen(!isNavOpen)} className="focus:outline-none">

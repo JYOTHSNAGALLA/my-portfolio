@@ -21,9 +21,9 @@ function App() {
       <MobileNav />
 
       {/* Main Content */}
-      <div className={`flex-1 transition-all duration-300 ease-in-out ${sidebarOpen ? 'md:ml-16' : 'md:ml-64'}`}>
+      <div className="flex-1">
         <DesktopNavbar />
-        <main className="pt-16 px-4">
+        <main className="pt-20 px-4 md:px-8">
           <About />
           <Resume />
           <Projects />
