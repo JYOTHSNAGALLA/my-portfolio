@@ -5,22 +5,19 @@ const MobileNav = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="md:hidden bg-white p-4 shadow fixed w-full z-50">
-      <div className="flex justify-between items-center">
-        <h1 className="text-xl font-bold">Jyothsna</h1>
-        <button onClick={() => setOpen(!open)}>
-          <FaBars className="text-xl" />
-        </button>
-      </div>
+    <div className="md:hidden fixed w-full bg-white shadow p-4 z-50 flex justify-between items-center">
+      <h2 className="text-xl font-bold">Jyothsna</h2>
+      <button onClick={() => setOpen(prev => !prev)}><FaBars className="text-xl"/></button>
+
       {open && (
-        <nav className="mt-4 flex flex-col gap-3 text-sm text-gray-700">
-          <a href="#about" className="hover:text-indigo-500">About</a>
-          <a href="#resume" className="hover:text-indigo-500">Resume</a>
-          <a href="#projects" className="hover:text-indigo-500">Projects</a>
-          <a href="#contact" className="hover:text-indigo-500">Contact</a>
+        <nav className="mt-3 flex flex-col space-y-2">
+          <a href="#about" className="text-gray-700 hover:text-indigo-500">About</a>
+          <a href="#resume" className="text-gray-700 hover:text-indigo-500">Resume</a>
+          <a href="#projects" className="text-gray-700 hover:text-indigo-500">Projects</a>
+          <a href="#contact" className="text-gray-700 hover:text-indigo-500">Contact</a>
         </nav>
       )}
-    </header>
+    </div>
   );
 };
 

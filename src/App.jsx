@@ -1,18 +1,18 @@
-import React from 'react';
-import Sidebar from './components/Sidebar';
-import MobileNav from './components/MobileNav';
-import About from './components/About';
-import Resume from './components/Resume';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import React from "react";
+import Sidebar from "./components/Sidebar";
+import MobileNav from "./components/MobileNav";
+import About from "./components/About";
+import Resume from "./components/Resume";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
-const App = () => {
+function App() {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="flex-1 ml-72 md:ml-72">
+      <div className="ml-0 md:ml-72 flex-1">
         <MobileNav />
-        <main className="pt-20 space-y-20">
+        <main className="pt-20 md:pt-0 px-4 space-y-20 bg-gray-900">
           <About />
           <Resume />
           <Projects />
@@ -21,6 +21,6 @@ const App = () => {
       </div>
     </div>
   );
-};
+}
 
-export default App; // ✅ Make sure this line exists!
+export default App;
