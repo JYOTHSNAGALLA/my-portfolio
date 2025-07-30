@@ -2,9 +2,9 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail, MdPhone, MdCake, MdLocationOn } from "react-icons/md";
 
 const Sidebar = () => (
-  <aside className="hidden md:flex flex-col justify-between w-64 bg-gray-900 text-white h-screen fixed p-6 shadow-lg z-30">
+  <aside className="hidden md:flex flex-col justify-center w-64 bg-gray-900 text-white h-screen fixed p-6 shadow-lg z-30">
     <div className="flex flex-col items-center">
-      <img src="/profile.jpg" alt="Jyothsna" className="rounded-full w-24 h-24 mb-4 border-4 border-white object-cover" />
+      <img src="/my-portfolio/assets/images/profile.jpg" alt="Jyothsna" className="rounded-full w-28 h-28 mb-4 border-4 border-white object-cover" />
       <h2 className="text-xl font-bold mb-1">Jyothsna Galla</h2>
       <p className="text-sm text-gray-400 mb-4">AI/ML Student</p>
 
