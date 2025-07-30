@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import MobileNav from "./components/MobileNav";
 import DesktopNavbar from "./components/DesktopNavbar";
@@ -7,13 +8,18 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+
   return (
-    <div className="bg-gray-100 text-gray-900 min-h-screen">
-      <Sidebar />
+    <div className="min-h-screen bg-gray-100 text-gray-800">
+      <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
       <MobileNav />
       <DesktopNavbar />
-
-      <main className="pt-20 md:pt-16 md:pl-64 transition-all duration-300">
+      <main
+        className={`pt-16 transition-all duration-300 ${
+          sidebarOpen ? "md:pl-64" : "md:pl-16"
+        }`}
+      >
         <About />
         <Resume />
         <Projects />
