@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
+import {FaBars,FaTimes,FaGithub,FaLinkedin,FaAngleLeft,FaAngleRight,} from "react-icons/fa";
 import { MdEmail, MdPhone, MdCake, MdLocationOn } from "react-icons/md";
 
 const MobileNav = () => {
@@ -12,14 +12,22 @@ const MobileNav = () => {
       <div className="md:hidden fixed top-0 left-0 w-full bg-gray-900 text-white z-50 p-4 flex justify-between items-center">
         {/* Left: Sidebar Toggle */}
         <button onClick={() => setSidebarOpen(!isSidebarOpen)} className="focus:outline-none">
-          {isSidebarOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
+          {isSidebarOpen ? (
+            <FaAngleLeft className="text-2xl" title="Close Sidebar" />
+          ) : (
+            <FaAngleRight className="text-2xl" title="Open Sidebar" />
+          )}
         </button>
 
         <h2 className="text-lg font-bold">Jyothsna</h2>
 
         {/* Right: Nav Menu Toggle */}
         <button onClick={() => setNavOpen(!isNavOpen)} className="focus:outline-none">
-          {isNavOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
+          {isNavOpen ? (
+            <FaTimes className="text-2xl" title="Close Menu" />
+          ) : (
+            <FaBars className="text-2xl" title="Open Menu" />
+          )}
         </button>
       </div>
 
@@ -55,10 +63,18 @@ const MobileNav = () => {
               </div>
             </div>
             <div className="flex justify-center gap-4 mt-4">
-              <a href="https://github.com/JYOTHSNAGALLA" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/JYOTHSNAGALLA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaGithub className="text-2xl text-gray-300 hover:text-white" />
               </a>
-              <a href="https://linkedin.com/in/jyothsna-galla-90a2bb291" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://linkedin.com/in/jyothsna-galla-90a2bb291"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaLinkedin className="text-2xl text-gray-300 hover:text-white" />
               </a>
             </div>
