@@ -3,7 +3,7 @@ import { MdEmail, MdPhone, MdCake, MdLocationOn } from "react-icons/md";
 
 const Sidebar = () => {
   return (
-    <aside className="hidden md:flex justify-center items-center h-screen w-72 fixed left-0 top-0 bg-gray-900 p-6 z-30 shadow-lg">
+    <aside className="hidden md:flex justify-center items-center h-screen w-72 fixed left-0 top-8 bg-gray-900 p-6 z-30 shadow-lg">
       <div className="bg-gray-800 rounded-xl p-6 w-full text-center shadow-inner">
         <img
           src="/profile.jpg"

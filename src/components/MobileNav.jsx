@@ -3,22 +3,30 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail, MdPhone, MdCake, MdLocationOn } from "react-icons/md";
 
 const MobileNav = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [isNavOpen, setNavOpen] = useState(false);
 
   return (
     <>
-      {/* Topbar */}
+      {/* Mobile Topbar */}
       <div className="md:hidden fixed top-0 left-0 w-full bg-gray-900 text-white z-50 p-4 flex justify-between items-center">
+        {/* Left: Sidebar Toggle */}
+        <button onClick={() => setSidebarOpen(!isSidebarOpen)} className="focus:outline-none">
+          {isSidebarOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
+        </button>
+
         <h2 className="text-lg font-bold">Jyothsna</h2>
-        <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
-          {isOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
+
+        {/* Right: Nav Menu Toggle */}
+        <button onClick={() => setNavOpen(!isNavOpen)} className="focus:outline-none">
+          {isNavOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
         </button>
       </div>
 
-      {/* Slide-in Sidebar */}
+      {/* Slide-in Sidebar (Left) */}
       <div
-        className={`fixed top-0 left-0 h-full w-72 bg-gray-800 text-white z-40 transform transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-5 left-0 h-full w-72 bg-gray-800 text-white z-40 transform transition-transform duration-300 ease-in-out ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="p-6 pt-20">
@@ -55,15 +63,18 @@ const MobileNav = () => {
               </a>
             </div>
           </div>
-
-          <nav className="mt-6 space-y-4 text-center">
-            <a href="#about" className="block hover:text-indigo-400">About</a>
-            <a href="#resume" className="block hover:text-indigo-400">Resume</a>
-            <a href="#projects" className="block hover:text-indigo-400">Projects</a>
-            <a href="#contact" className="block hover:text-indigo-400">Contact</a>
-          </nav>
         </div>
       </div>
+
+      {/* Dropdown Nav Menu (Top right) */}
+      {isNavOpen && (
+        <div className="md:hidden fixed top-16 right-4 w-48 bg-gray-800 text-white z-40 shadow-lg rounded-lg p-4 space-y-4 animate-fade-in-down">
+          <a href="#about" className="block hover:text-indigo-400">About</a>
+          <a href="#resume" className="block hover:text-indigo-400">Resume</a>
+          <a href="#projects" className="block hover:text-indigo-400">Projects</a>
+          <a href="#contact" className="block hover:text-indigo-400">Contact</a>
+        </div>
+      )}
     </>
   );
 };
