@@ -5,12 +5,7 @@ import { MdEmail, MdPhone, MdCake, MdLocationOn } from "react-icons/md";
 const Sidebar = () => (
   <aside className="hidden md:flex flex-col items-center w-72 bg-gray-900 text-white h-screen fixed left-0 top-0 pt-24 shadow-lg rounded-tr-3xl rounded-br-3xl">
     {/* Profile Image */}
-    <img
-  src="/assets/images/Profile.jpg"
-  alt="Jyothsna Galla"
-  className="rounded-xl w-28 h-28 object-cover mb-4 border border-gray-300"
-/>
-
+    <img src="/Profile.jpg" alt="Jyothsna Galla" className="rounded-full w-28 h-28" />
 
     {/* Name & Role */}
     <h2 className="text-lg font-semibold mb-1">Jyothsna Galla</h2>
