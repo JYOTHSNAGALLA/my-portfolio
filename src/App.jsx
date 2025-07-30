@@ -1,21 +1,14 @@
 import Sidebar from './components/Sidebar';
-import About from './components/About';
-import Resume from './components/Resume';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import MobileNav from './components/MobileNav';
 
 function App() {
   return (
     <div className="flex">
       <Sidebar />
-      <main className="flex-1 ml-0 md:ml-72">
-        <About />
-        <Resume />
-        <Projects />
-        <Contact />
-      </main>
+      <div className="flex-1 ml-72 md:ml-72">
+        <MobileNav />
+        {/* Your other components here */}
+      </div>
     </div>
   );
 }
-
-export default App;

@@ -1,34 +1,42 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail, MdPhone, MdLocationOn, MdCake } from "react-icons/md";
 
 const Sidebar = () => {
   return (
-    <aside className="fixed top-0 left-0 h-full w-72 bg-gray-900 text-white border-r border-gray-800 p-6 hidden md:flex flex-col justify-between z-50">
-      {/* Profile Info */}
+    <aside className="w-72 bg-white border-r border-gray-200 fixed h-screen p-6 shadow-lg hidden md:block">
       <div className="text-center">
-        <img
-          src="/my-portfolio/assets/images/profile.jpg"
-          alt="Jyothsna"
-          className="rounded-full w-28 h-28 mx-auto mb-4 border-4 border-indigo-500"
-        />
+        <img src="/profile.jpg" alt="Jyothsna" className="rounded-full w-32 h-32 mx-auto mb-4" />
         <h1 className="text-xl font-bold">Jyothsna Galla</h1>
-        <p className="text-sm text-gray-400">AI/ML Student</p>
+        <p className="text-sm text-gray-500">AI/ML Student</p>
       </div>
 
-      {/* Navigation Links */}
-      <nav className="mt-10 flex flex-col gap-4 text-sm">
-        <a href="#about" className="hover:text-indigo-400 transition">About</a>
-        <a href="#resume" className="hover:text-indigo-400 transition">Resume</a>
-        <a href="#projects" className="hover:text-indigo-400 transition">Projects</a>
-        <a href="#contact" className="hover:text-indigo-400 transition">Contact</a>
-      </nav>
+      <hr className="my-4" />
 
-      {/* Social Icons */}
-      <div className="mt-10 flex justify-center gap-4">
+      <div className="text-sm text-gray-600 space-y-4">
+        <div className="flex items-center gap-2">
+          <MdEmail className="text-lg" />
+          <span>gallajyothsna13@gmail.com</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <MdPhone className="text-lg" />
+          <span>+91 93988 37173</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <MdCake className="text-lg" />
+          <span>March 15, 2005</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <MdLocationOn className="text-lg" />
+          <span>Visakhapatnam, Andhra Pradesh, India</span>
+        </div>
+      </div>
+
+      <div className="mt-6 flex justify-center gap-4">
         <a href="https://github.com/JYOTHSNAGALLA" target="_blank" rel="noopener noreferrer">
-          <FaGithub className="text-xl hover:text-indigo-400 transition" />
+          <FaGithub className="text-xl" />
         </a>
         <a href="https://linkedin.com/in/jyothsna-galla-90a2bb291" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin className="text-xl hover:text-indigo-400 transition" />
+          <FaLinkedin className="text-xl" />
         </a>
       </div>
     </aside>
