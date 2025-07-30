@@ -39,7 +39,7 @@ const MobileNav = () => {
       >
         <div className="p-6 pt-20">
           <div className="bg-gray-700 rounded-xl p-4 text-center shadow-md">
-            <img src="/Profile.jpg" alt="Jyothsna Galla" className="rounded-full w-28 h-28" />
+            <img src={`${import.meta.env.BASE_URL}assets/images/Profile.jpg`} alt="Jyothsna Galla" className="rounded-full w-28 h-28" />
 
             <h2 className="text-lg font-semibold">Jyothsna Galla</h2>
             <p className="bg-gray-600 text-xs text-white px-2 py-1 rounded mt-1 inline-block">
