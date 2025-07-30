@@ -8,11 +8,12 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="bg-gray-100 text-gray-800">
+    <div className="bg-gray-100 text-gray-900 min-h-screen">
       <Sidebar />
       <MobileNav />
       <DesktopNavbar />
-      <main className="pt-20 md:pl-64 px-4">
+
+      <main className="pt-20 md:pt-16 md:pl-64 transition-all duration-300">
         <About />
         <Resume />
         <Projects />
