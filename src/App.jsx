@@ -11,20 +11,18 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800">
-      <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
-      <MobileNav />
-      <DesktopNavbar />
-      <main
-        className={`pt-16 transition-all duration-300 ${
-          sidebarOpen ? "md:pl-64" : "md:pl-16"
-        }`}
-      >
-        <About />
-        <Resume />
-        <Projects />
-        <Contact />
-      </main>
+    <div className="flex bg-gray-900 text-white min-h-screen">
+      <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
+      <div className={`flex-1 transition-all duration-300 ${sidebarOpen ? "md:ml-64" : "md:ml-16"}`}>
+        <MobileNav />
+        <DesktopNavbar />
+        <main className="pt-16 px-4 md:px-10">
+          <About />
+          <Resume />
+          <Projects />
+          <Contact />
+        </main>
+      </div>
     </div>
   );
 }

@@ -1,17 +1,9 @@
 const DesktopNavbar = () => (
-  <nav className="hidden md:flex justify-center gap-8 bg-gray-900 text-white py-4 fixed top-0 left-0 w-full z-40 pl-64">
-    <a href="#about" className="hover:text-indigo-400">
-      About
-    </a>
-    <a href="#resume" className="hover:text-indigo-400">
-      Resume
-    </a>
-    <a href="#projects" className="hover:text-indigo-400">
-      Projects
-    </a>
-    <a href="#contact" className="hover:text-indigo-400">
-      Contact
-    </a>
+  <nav className="hidden md:flex fixed top-0 left-0 w-full h-16 items-center justify-center gap-10 bg-gray-900 text-white z-30 ml-64">
+    <a href="#about" className="hover:text-indigo-400">About</a>
+    <a href="#resume" className="hover:text-indigo-400">Resume</a>
+    <a href="#projects" className="hover:text-indigo-400">Projects</a>
+    <a href="#contact" className="hover:text-indigo-400">Contact</a>
   </nav>
 );
 

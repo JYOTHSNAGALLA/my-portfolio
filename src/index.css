@@ -2,11 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Optional: global base styles using Tailwind */
-body {
-  @apply bg-gray-900 text-white font-sans leading-relaxed overflow-x-hidden;
+/* RESET DEFAULT SPACING AND BOX MODEL */
+* {
+  @apply box-border;
 }
 
+html, body, #root {
+  @apply m-0 p-0 h-full w-full bg-gray-900 text-white font-sans leading-relaxed overflow-x-hidden;
+}
+
+/* GLOBAL TEXT STYLES */
 h1, h2, h3, h4, h5, h6 {
   @apply font-bold;
 }
@@ -14,3 +19,9 @@ h1, h2, h3, h4, h5, h6 {
 a {
   @apply text-indigo-400 hover:text-indigo-300 font-medium;
 }
+
+/* REMOVE GAP BETWEEN SECTIONS (e.g., top navbar and main content) */
+main {
+  @apply pt-16; /* Make sure this matches topbar height */
+}
+
